@@ -1,0 +1,56 @@
+@import "../../_colors.scss";
+
+.search-bar {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 126px;
+  left: 10%;
+  width: 80%;
+  min-height: 60px;
+  margin: auto;
+  background: #fff;
+  border-radius: 6px;
+  z-index: 5;
+  box-shadow: 0px 5px 10px rgba(123, 142, 142, 0.3);
+
+  .search-items-container {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1rem 0 0 2rem;
+  }
+
+  .clear-button {
+    align-self: stretch;
+    display: flex;
+    align-items: baseline;
+
+    .clear-text {
+      padding-right: 2rem;
+      color: $color-dark-grayish-cyan;
+      margin: auto;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-primary;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 410px) {
+  .search-bar {
+    .search-items-container {
+      padding: 1rem 0 0 1rem;
+    }
+    .clear-button {
+      .clear-text {
+        padding-right: 1rem;
+      }
+    }
+  }
+}

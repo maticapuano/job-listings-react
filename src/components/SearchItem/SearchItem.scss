@@ -1,0 +1,38 @@
+@import "../../_colors.scss";
+
+.search-item {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  height: 30px;
+  color: $color-primary;
+  background: $color-light-grayish-cyan;
+  border-radius: 4px;
+  width: max-content;
+
+  .search-text {
+    display: inline;
+    padding: 0 10px;
+    align-self: center;
+    font-size: 12px;
+    font-weight: 700;
+    user-select: none;
+  }
+
+  .remove-button {
+    color: #fff;
+    text-align: center;
+    background: $color-primary;
+    width: 30px;
+    height: 30px;
+    line-height: 32px;
+    font-size: 1rem;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background: $color-very-dark-grayish-cyan;
+    }
+  }
+}

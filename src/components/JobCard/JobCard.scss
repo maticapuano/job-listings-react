@@ -1,0 +1,166 @@
+@import "../../colors";
+
+.job-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  min-height: 156px;
+  margin: 1.5rem auto;
+  background: #fff;
+  border-radius: 6px;
+  border-left: 5px solid transparent;
+  box-shadow: 0px 5px 10px rgba(123, 142, 142, 0.3);
+
+  &:last-child {
+    margin-bottom: 100px;
+  }
+
+  hr {
+    color: $color-dark-grayish-cyan;
+    margin: 1rem;
+    display: block;
+    width: calc(100% - 2rem);
+    display: none;
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    .job-image {
+      margin: 2rem;
+    }
+
+    .company-info {
+      display: flex;
+      flex-direction: column;
+      font-weight: 700;
+      .top-row {
+        display: flex;
+        height: 25px;
+        line-height: 28px;
+        .company-name {
+          color: $color-primary;
+          margin-right: 5px;
+        }
+        .status {
+          text-transform: uppercase;
+          width: max-content;
+          margin-left: 0.5rem;
+          padding: 0 8px;
+          text-align: center;
+          font-size: 10px;
+          border-radius: 13px;
+          color: #fff;
+        }
+        .new {
+          background: $color-primary;
+        }
+        .featured {
+          background: $color-very-dark-grayish-cyan;
+        }
+      }
+
+      .middle-row {
+        font-weight: 700;
+        margin-top: 0.75rem;
+        font-size: 1.1rem;
+        color: $color-very-dark-grayish-cyan;
+        cursor: pointer;
+        &:hover {
+          color: $color-primary;
+        }
+      }
+
+      .bottom-row {
+        margin-top: 0.7rem;
+        font-weight: 500;
+        font-size: 12px;
+        color: $color-dark-grayish-cyan;
+      }
+    }
+  }
+  .tags {
+    display: flex;
+    flex-flow: row wrap;
+    .tag-item {
+      font-size: 13px;
+      margin: 0.5rem 0.5rem;
+      height: 30px;
+      padding: 0 5px;
+      font-weight: 700;
+      color: $color-primary;
+      background: $color-light-grayish-cyan;
+      border-radius: 4px;
+      line-height: 32px;
+      width: max-content;
+      cursor: pointer;
+
+      &:last-child {
+        margin-right: 2rem;
+      }
+
+      &:hover {
+        background: $color-primary;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.featured {
+  border-color: $color-primary;
+}
+
+@media (max-width: 960px) {
+  .job-card {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0.75rem 0 0.75rem;
+    padding-top: 1rem;
+    margin: 2.5rem auto;
+
+    hr {
+      display: block;
+    }
+
+    .left {
+      flex-direction: column;
+      align-items: flex-start;
+      height: max-content;
+      margin: 1rem;
+      margin-bottom: 0px;
+      .job-image {
+        width: 50px;
+        padding-bottom: 80px;
+        position: absolute;
+        top: -56px;
+        left: 0;
+        img {
+          width: 50px;
+        }
+      }
+
+      .company-info {
+        .top-row {
+          .company-name {
+            font-size: 13px;
+          }
+        }
+
+        .middle-row {
+          font-size: 15px;
+        }
+      }
+    }
+    .tags {
+      max-width: calc(100% - 2rem);
+      .tag-item {
+        font-size: 12px;
+        margin: 0 0 20px 1rem;
+      }
+    }
+  }
+}
